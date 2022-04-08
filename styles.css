@@ -21,6 +21,16 @@ html{
 }
 
 /* Versión mobile (320px hasta 767px de ancho): */
+body{
+    position: relative;
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    min-height: 12vh;
+    border-color: pink;
+}
 
 .main__container{
     display: flex;
