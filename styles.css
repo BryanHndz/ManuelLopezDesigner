@@ -48,20 +48,22 @@ header > img {
     margin: auto 3%;
 }
 
-header > button {
+header > button, .header__menu--button {
     width: 45px;
     height: 45px;
     margin: auto 3%;
     background: url(./assets/icons/burger-menu.svg);
     background-position: center;
     background-repeat: no-repeat;
-    border: 2px solid var(--primary-font-color);
+    border: 1px solid var(--primary-font-color);
     line-height: 10px;
 }
 
 /*Componente del contenido: */
 
 .main__container{
+    /*Display provisional mientras hago el menú desplegable: */
+    /* display: none; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,6 +87,7 @@ header > button {
     color: var(--primary-font-color);
     line-height: 30px;
     text-align: center;
+    transition: opacity 0.5s;
 }
 
 .main__container--videodes > h1 > span {
@@ -93,6 +96,86 @@ header > button {
     font-weight: 400;
     text-transform: uppercase;
 }
+
+/* Dropdown lateral menu: */
+
+.inactive {
+    display: none;
+}
+
+.menu{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 2;
+}
+
+.close{
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    background: url(./assets/icons/equis.svg);
+    background-position: center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
+
+.menu > div {
+    position: relative;
+    padding-left: 60px;
+    width: 100%;
+    min-width: 320px;
+    height: 60vh;
+    max-height: 330px; 
+    top: 20vh;
+    
+}
+
+.menu > div > img {
+    position: relative;
+    top: 8%;
+    width: 60px;
+    height: 60px;
+}
+
+.menu > div > .menu__options--pages {
+    position: relative;
+    top: 16%;
+    list-style: none;
+    font-size: 1.4rem;
+    line-height: 35px;
+    font-weight: 400;
+}
+
+.menu > div > .menu__options--pages > li {
+    font-family: var(--secondary-font);
+    cursor: pointer;
+    color: #d2d3ce;
+}
+
+.menu > div > .menu__options--pages > li:hover,
+.menu > div > .menu__options--social > li:hover {
+    opacity: 0.7;
+}
+
+.menu > div > .menu__options--social{
+    display: flex;
+    position: relative;
+    top: 25%;
+    list-style: none;
+}
+
+.menu > div > .menu__options--social > li {
+    margin: 0px 12px 0px 0px;
+    width: 15px;
+    height: 17px;
+    cursor: pointer;
+}
+
+
 
 /* Efecto de cambio de texto en el hover: */
 
@@ -103,10 +186,12 @@ header > button {
 
 .main__container--videodes > h1:hover{
     opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .main__container--videodes:hover ~ .watch {
     opacity: 1;
+    transition: opacity 0.5s;
 }
 
 
