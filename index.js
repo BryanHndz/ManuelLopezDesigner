@@ -4,10 +4,13 @@ const dropmenu = document.getElementById('menu');
 const openb = document.getElementById('open--button');
 const closeb = document.getElementById('close--button');
 
-openb.addEventListener('click', ()=>{
+//Haciendo la dinámica de abrir y cerrar el menu lateral:
+
+openb.addEventListener('click', () => {
     dropmenu.classList.remove('inactive');
 });
 
-closeb.addEventListener('click', ()=>{
+closeb.addEventListener('click', () => {
     dropmenu.classList.add('inactive');
 });
+
