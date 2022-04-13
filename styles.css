@@ -99,11 +99,9 @@ header > button, .header__menu--button {
 
 /* Dropdown lateral menu: */
 
-.inactive {
-    display: none;
-}
-
 .menu{
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -111,6 +109,13 @@ header > button, .header__menu--button {
     height: 100vh;
     background-color: black;
     z-index: 2;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.active-onclick {
+    opacity: 1;
+    visibility: visible;
 }
 
 .close{
@@ -131,7 +136,6 @@ header > button, .header__menu--button {
     height: 60vh;
     max-height: 330px; 
     top: 20vh;
-    
 }
 
 .menu > div > img {
