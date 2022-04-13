@@ -158,6 +158,7 @@ header > button, .header__menu--button {
     font-family: var(--secondary-font);
     cursor: pointer;
     color: #d2d3ce;
+    width: fit-content;
 }
 
 .menu > div > .menu__options--pages > li:hover,
