@@ -120,7 +120,7 @@ header > button, .header__menu--button {
 
 .close{
     position: absolute;
-    top: 10px;
+    top: 8px;
     right: 0px;
     background: url(./assets/icons/equis.svg);
     background-position: center;
@@ -177,6 +177,7 @@ header > button, .header__menu--button {
     width: 15px;
     height: 17px;
     cursor: pointer;
+    width: fit-content;
 }
 
 
