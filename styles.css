@@ -191,6 +191,8 @@ header > button, .header__menu--button {
 /* Efecto de cambio de texto en el hover: */
 
 .watch {
+    -webkit-text-stroke: 1.2px white;
+    color: transparent;
     font-size: 5rem;
     opacity: 0;
 }
@@ -223,6 +225,6 @@ header > button, .header__menu--button {
         }
 
         .watch {
-            font-size: 8rem;
+            font-size: 10rem;
         }
     }
