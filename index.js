@@ -1,9 +1,9 @@
 
 //Selecting the DOM elements to work with those:
 
-const dropmenu = document.getElementById('menu');
-const openb = document.getElementById('open--button');
-const closeb = document.getElementById('close--button');
+const dropmenu = document.querySelector('.menu');
+const openb = document.querySelector('#open--button');
+const closeb = document.querySelector('#close--button');
 const watch = document.querySelector('#watch');
 //Haciendo la dinámica de abrir y cerrar el menu lateral:
 
