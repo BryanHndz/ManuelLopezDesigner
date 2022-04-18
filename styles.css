@@ -83,6 +83,10 @@ header > button, .header__menu--button {
     background-repeat: no-repeat;
 }
 
+.main__container > div {
+    cursor: pointer;
+}
+
 .main__container--videodes{
     position: absolute;
     width: 100%;
