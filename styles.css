@@ -90,6 +90,7 @@ header > button, .header__menu--button {
     visibility: hidden;
     opacity: 0;
     position: absolute;
+    bottom: 0vh;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -99,11 +100,13 @@ header > button, .header__menu--button {
     overflow: auto;
     z-index: 3;
     transition: all 0.5s;
+    transform: translateY(-30vh);
 }
 
 .overview {
    visibility: visible;
    opacity: 1;
+   transform: translateY(0vh);
 }
 
 .podcast__title--button {
