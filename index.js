@@ -7,6 +7,7 @@ const closeb = document.querySelector('#close--button');
 const watch = document.querySelector('.main__container--videodes');
 const watchclose = document.querySelector('#closewatch');
 const podcast = document.querySelector('#podcast');
+const pplayer = document.querySelector('#podcast--player');
 //Haciendo la dinámica de abrir y cerrar el menu lateral:
 
 openb.addEventListener('click', () => {
