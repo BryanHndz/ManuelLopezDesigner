@@ -30,16 +30,17 @@ body{
 
 header{
     /* display: none; */
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    position: absolute;
     min-width: inherit;
     width: 100%;
     height: auto;
     margin-top: 8px;
     max-height: 60px;
     vertical-align: top;
+    z-index: 3;
 }
 
 header > img {
@@ -66,11 +67,28 @@ header > button, .header__menu--button {
     cursor: pointer;
 }
 
+
+main {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+
 /*Componente del contenido: */
+.first{
+    background: url(./assets/images/mic.jpg);
+}
+
+.second{
+    background: url(./assets/images/microfono-wallpaper.jpg);
+}
 
 .main__container{
     /*Display provisional mientras hago el menú desplegable: */
     /* display: none; */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,11 +96,13 @@ header > button, .header__menu--button {
     width: 100%;
     height: 100vh;
     padding: 2em;
-    background: url(./assets/images/mic.jpg);
+    
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
+    scroll-snap-align: center;
 }
+
 
 /* Ventana emergente que reproduce el podcast: */
 
@@ -179,14 +199,14 @@ header > button, .header__menu--button {
 .menu{
     opacity: 0;
     visibility: hidden;
-    position: absolute;
+    position: fixed;
     top: 0px;
     right: 0px;
     width: 100%;
     height: 100vh;
     overflow-y: auto;
     background-color: black;
-    z-index: 2;
+    z-index: 3;
     -moz-transition: all 0.2s ease-in-out;
     transition: opacity visiblity 0.2s ease-in-out;
 }
