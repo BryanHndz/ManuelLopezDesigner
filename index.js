@@ -6,8 +6,15 @@ const openb = document.querySelector('#open--button');
 const closeb = document.querySelector('#close--button');
 const watch = document.querySelector('.main__container--videodes');
 const watchclose = document.querySelector('#closewatch');
-const podcast = document.querySelector('#podcast');
+
+const podcast = document.querySelectorAll('#podcast');
+const podcastArray = [...podcast];
+
+const mcontainer = document.querySelectorAll('#mcontainer');
+const mcontainerArray = [...mcontainer];
+
 const pplayer = document.querySelector('#podcast--player');
+
 //Haciendo la dinámica de abrir y cerrar el menu lateral:
 
 openb.addEventListener('click', () => {
@@ -25,3 +32,11 @@ watch.addEventListener('click', () => {
 watchclose.addEventListener('click', () => {
     podcast.classList.remove('overview');
 });
+
+//Asignando el event listener a su respectivo elemento:
+
+for (let i = 0; i < mcontainerArray.length; i++) {
+    mcontainerArray[i].addEventListener('click', () => {
+        podcastArray[i].classList.toggle('overview');
+    })
+}

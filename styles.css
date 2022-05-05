@@ -67,14 +67,12 @@ header > button, .header__menu--button {
     cursor: pointer;
 }
 
-
 main {
     width: 100vw;
     height: 100vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
 }
-
 
 /*Componente del contenido: */
 .first{
@@ -96,13 +94,12 @@ main {
     width: 100%;
     height: 100vh;
     padding: 2em;
-    
+    overflow-x: hidden;
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
     scroll-snap-align: center;
 }
-
 
 /* Ventana emergente que reproduce el podcast: */
 
