@@ -1,6 +1,6 @@
 
 //Selecting the DOM elements to work with those:
-
+const main = document.querySelector('main');
 const dropmenu = document.querySelector('.menu');
 const openb = document.querySelector('#open--button');
 const closeb = document.querySelector('#close--button');
@@ -27,10 +27,12 @@ closeb.addEventListener('click', () => {
 
 watch.addEventListener('click', () => {
     podcast.classList.add('overview');
+    main.style.overflowY = 'hidden';
 });
 
 watchclose.addEventListener('click', () => {
     podcast.classList.remove('overview');
+    main.style.overflowY = 'scroll';
 });
 
 //Asignando el event listener a su respectivo elemento:
